@@ -1,0 +1,10 @@
+.order{
+    height: 100vh;
+    background-color: #FFE0B3;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+}
+.order-title{
+    margin-top: 0;
+}

@@ -1,0 +1,22 @@
+nav{
+    background-color: #1C2B35;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 1rem;
+    border-bottom: 2px solid transparent;
+    padding: 0 .3rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li:hover{
+    border-bottom: 2px solid orange;
+}
