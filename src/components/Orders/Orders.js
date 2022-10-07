@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import { removeItem } from '../../utilities/lcdb';
+import { removeCart, removeItem } from '../../utilities/lcdb';
 import Order from '../Order/Order';
 import OrderReview from '../OrderReview/OrderReview';
 import { ToastContainer, toast } from 'react-toastify';
@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Orders.css';
 
 const Orders = () => {
-    const { products, oldCart } = useLoaderData();
+    const { oldCart } = useLoaderData();
     const [cart, setCart] = useState(oldCart);
     const handleRemoveItem = (id) => {
         const newCart = cart.filter(product => product.id !== id);
@@ -23,6 +23,10 @@ const Orders = () => {
             draggable: true,
             progress: undefined,
         });
+    }
+    const handleRemoveAll = () => {
+        setCart([]);
+        removeCart()
     }
     return (
         <div className='shop-container'>
@@ -41,6 +45,7 @@ const Orders = () => {
             <div className='order-container'>
                 <Order
                     cart={cart}
+                    handleRemoveAll={handleRemoveAll}
                 ></Order>
             </div>
             <ToastContainer

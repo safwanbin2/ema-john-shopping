@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { addToDb, getCart } from '../../utilities/lcdb';
+import { addToDb, getCart, removeCart} from '../../utilities/lcdb';
 import Order from '../Order/Order';
 import Product from '../Product/Product';
 import './Shop.css';
@@ -38,7 +38,11 @@ const Shop = () => {
         setCart(newCart);
         addToDb(product.id);
     }
-    
+    const handleRemoveAll = () => {
+        setCart([]);
+        removeCart();
+    }
+
     return (
         <div className='shop-container'>
             <div className='products-container'>
@@ -51,7 +55,10 @@ const Shop = () => {
                 }
             </div>
             <div className='order-container'>
-                <Order cart={cart}></Order>
+                <Order 
+                cart={cart}
+                handleRemoveAll={handleRemoveAll}
+                ></Order>
             </div>
         </div>
     );

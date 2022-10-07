@@ -1,7 +1,7 @@
 import React from 'react';
 import './Order.css';
 
-const Order = ({cart}) => {
+const Order = ({cart, handleRemoveAll}) => {
     // adding price 
     let totalPrice = 0;
     let totalShipping = 0;
@@ -21,6 +21,7 @@ const Order = ({cart}) => {
             <p>Total Shipping Chrage: ${totalShipping}</p>
             <p>Tax: ${totalTax}</p>
             <h4>Grand Total: ${grandTotal}</h4>
+            <button className='remove-all-btn' onClick={handleRemoveAll}>Clear All</button>
         </div>
     );
 };
