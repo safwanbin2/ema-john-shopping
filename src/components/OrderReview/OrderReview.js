@@ -12,10 +12,10 @@ const OrderReview = ({ item, handleRemoveItem }) => {
             </div>
             <div className='review'>
                 <div className='info'>
-                    <p>{name}</p>
-                    <p><small>Price: {price}</small></p>
-                    <p><small>Shipping: {shipping}</small></p>
-                    <p><small>Quantity: {quantity}</small></p>
+                    <p className='product-name'>{name}</p>
+                    <p><small>Price: <span>{price}</span>$</small></p>
+                    <p><small>Shipping: <span>{shipping}</span>$</small></p>
+                    <p><small>Quantity: <span>{quantity}</span></small></p>
                 </div>
                 <div>
                     <button onClick={() => handleRemoveItem(id)} className='delete-btn'>

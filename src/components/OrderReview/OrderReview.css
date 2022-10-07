@@ -20,6 +20,14 @@
 .info p{
     margin: 0;
 }
+.info p span{
+    color: rgb(255, 123, 0);
+    font-size: 16px;
+    font-weight: 400;
+}
+.product-name{
+    font-weight: 600;
+}
 .delete-btn{
     border-radius: 20px 0 20px 0;
     padding: 1rem;
