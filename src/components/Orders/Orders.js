@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { removeItem } from '../../utilities/lcdb';
 import Order from '../Order/Order';
 import OrderReview from '../OrderReview/OrderReview';
@@ -33,6 +33,9 @@ const Orders = () => {
                         item={item}
                         handleRemoveItem={handleRemoveItem}
                     ></OrderReview>)
+                }
+                {
+                    cart.length === 0 && <h2>You have Nothing in your Cart. plese <Link to="/">Shop More</Link></h2>
                 }
             </div>
             <div className='order-container'>
