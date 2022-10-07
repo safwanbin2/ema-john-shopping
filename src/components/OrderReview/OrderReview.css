@@ -1,7 +1,7 @@
 .item img{
     width: 90px;
     height: 100%;
-    border-radius: 20px 0 0 0;
+    border-radius: 20px 0 20px 0;
 }
 .item{
     display: flex;
@@ -21,11 +21,15 @@
     margin: 0;
 }
 .delete-btn{
-    border-radius: 50%;
+    border-radius: 20px 0 20px 0;
     padding: 1rem;
     background-color: rgb(248, 165, 165);
     border: none;
     cursor: pointer;
+    transition: .3s all;
+}
+.delete-btn:hover{
+    background-color: rgb(226, 110, 110);
 }
 .delete-icon{
     font-size: 20px;
