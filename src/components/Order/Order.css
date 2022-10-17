@@ -19,6 +19,7 @@
     color: white;
     padding: .4rem 0;
     transition: .3s all;
+    display: block;
 }
 .remove-all-btn:hover{
     background-color: rgb(248, 165, 165);

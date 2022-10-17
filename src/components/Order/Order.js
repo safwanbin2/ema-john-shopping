@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Order.css';
 
 const Order = ({cart, handleRemoveAll}) => {
@@ -21,6 +22,7 @@ const Order = ({cart, handleRemoveAll}) => {
             <p>Total Shipping Chrage: ${totalShipping}</p>
             <p>Tax: ${totalTax}</p>
             <h4>Grand Total: ${grandTotal}</h4>
+            <Link className='remove-all-btn' to='shipment'>Ship</Link>
             <button className='remove-all-btn' onClick={handleRemoveAll}>Clear All</button>
         </div>
     );
